@@ -16,8 +16,8 @@ v
 ```
                                                          
 > [!TIP]
-> * `<` symbol on line 3 MUST align with '|' below;
-> * `>` symbol on line 5 MUST align with '|' above;
+> * `<` symbol on line 3 MUST align with `|` below;
+> * `>` symbol on line 5 MUST align with `|` above;
 
 ## program flow
 
@@ -27,9 +27,12 @@ v
 * ...**DOWN** (since stack is empty - ie. popped value is `0`) to line 5 `>` (under `|` instruction) and **left-to-right** performing the following:
     * `&` - accepts **user input**
     * `1` - pushes **predefined value** (of 1) to the stack
-    * `` ` `` - compares the user input with the predefined value
+    * `` ` `` - **compares** the user input with the predefined value:
+        * pushes '1' to stack if input is **greater than** the predefined,
+        * otherwise pushes '0'
+        * *(NOTE: this will be the next **popped value**)*
     * `>` - moves to the **right** to the next instruction
-    * `|` - moves **UP** to line 4 if popped value is NOT 0 (from there moves **UP** to line 3, **UP** to line 2, moves **RIGHT** and prints `Output is ONE`); moves **DOWN** to line 6 if popped value IS 0 (and from there moves **RIGHT** and prints `Output is zero`)
+    * `|` - moves **UP** to line 4 if the **popped value** is NOT 0 (from there moves **UP** to line 3, **UP** to line 2, moves **RIGHT** and prints `Output is ONE`); moves **DOWN** to line 6 if the popped value IS 0 (and from there moves **RIGHT** and prints `Output is zero`)
         * **NOTE:** these printed messages were **intentionally** *not* optimized, for easier readability
         * `,` - pops value and prints it as ASCII value
     * `@` - ends the program
