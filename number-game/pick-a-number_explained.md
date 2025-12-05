@@ -43,3 +43,7 @@ Enter a number between 0 and 10: 5
 Output is ONE.
 
 ```
+
+> [!NOTE]
+> A **newline character** *may* be automatically appended when a string is printed causing *unexpected characters* (such as a `.`) to be displayed at the end of the output.
+
