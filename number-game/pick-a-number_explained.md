@@ -31,7 +31,7 @@ v
     * `>` - moves to the **right** to the next instruction
     * `|` - moves **UP** to line 4 if popped value is NOT 0 (from there moves **UP** to line 3, **UP** to line 2, moves **RIGHT** and prints `Output is ONE`); moves **DOWN** to line 6 if popped value IS 0 (and from there moves **RIGHT** and prints `Output is zero`)
         * **NOTE:** these printed messages were **intentionally** *not* optimized, for easier readability
-        * ',' - pops value and prints it as ASCII value
+        * `,` - pops value and prints it as ASCII value
     * `@` - ends the program
 
 ## output
