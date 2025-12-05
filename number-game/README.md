@@ -45,5 +45,5 @@ Output is ONE.
 ```
 
 > [!NOTE]
-> A **newline character** *may* be automatically appended when a string is printed causing *unexpected characters* (such as a `.`) to be displayed at the end of the output.
+> A **newline character** *may* be automatically appended when a string is printed (by default) causing *unexpected characters* (such as a `.`) to be displayed at the end of the output.
 
