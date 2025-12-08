@@ -8,11 +8,12 @@
 ## code
 ```befunge
 v
-                                                         > "ENO si tuptuO" ,,,,,,,,,,,,,, @
-                                         v  ,  <         ^
->    " :01 dna 0 neewteb rebmun a retnE" >  :  |         ^
-                                               > & 1 ` > |
+                                                         > "ENO si tuptuO" ,,,,,,,,,,,,,, !|
+                                         v  ,  <         ^                                .|
+>    " :01 dna 0 neewteb rebmun a retnE" >  :  |         ^                                .|
+                                               > & 1 ` > |                                .|
                                                          > "orez si tuptuO" ,,,,,,,,,,,,,, @
+
 ```
                                                          
 > [!TIP]
@@ -32,10 +33,24 @@ v
         * otherwise pushes '0'
         * *(NOTE: this will be the next **popped value**)*
     * `>` - moves to the **right** to the next instruction
-    * `|` - moves **UP** to line 4 if the **popped value** is NOT 0 (from there moves **UP** to line 3, **UP** to line 2, moves **RIGHT** and prints `Output is ONE`); moves **DOWN** to line 6 if the popped value IS 0 (and from there moves **RIGHT** and prints `Output is zero`)
-        * **NOTE:** these printed messages were **intentionally** *not* optimized, for easier readability
-        * `,` - pops value and prints it as ASCII value
-    * `@` - ends the program
+    * `|` - **compares** the popped value with `0`:
+        * if the **popped value** is **NOT** `0`:
+            * moves **UP** to line 4 ,
+            * from there moves **UP** to line 3,
+            * moves **UP** to line 2,
+            * moves **RIGHT** and prints `Output is ONE` [<sup>1</sup>](#superscript-1);
+            * (on line 2) the value is **negated** by the `!` instruction, which pops the top value off the stack and pushes `0` (since the value is non-zero) setting the direction of the `|` instruction to **DOWN**,
+            * (on lines 3-5 left-to-right) the `.` instruction pops the top value from the stack, the direction of the `|` instruction is **DOWN**,
+            * (on line 6) the `@` instruction is reached and ends the program.
+        *  if the popped value **IS** `0`:
+            *  moves **DOWN** to line 6
+            *  from there moves **RIGHT** and prints `Output is zero` [<sup>2</sup>](#superscript-2)
+            * (on line 6) the `@` instruction ends the program.
+
+> [!NOTE]
+> * <a name="superscript-1"></a><sup>1</sup>, <a name="superscript-2"></a><sup>2</sup> - These printed messages were **intentionally** *not* optimized, for easier readability
+>
+> * `,` - pops value and prints it as ASCII value
 
 ## output
 ```console
