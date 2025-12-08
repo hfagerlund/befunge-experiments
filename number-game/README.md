@@ -52,6 +52,7 @@ v
 >
 > * `,` - pops value and prints it as ASCII value
 
+- - -
 ## output
 ```console
 Enter a number between 0 and 10: 0
