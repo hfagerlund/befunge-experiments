@@ -33,7 +33,7 @@ v
         * otherwise pushes '0'
         * *(NOTE: this will be the next **popped value**)*
     * `>` - moves to the **right** to the next instruction
-    * `|` - **compares** the popped value with `0`:
+    * `|` - perfoms a **conditional operation** based on the popped value:
         * if the **popped value** is **NOT** `0`:
             * moves **UP** to line 4 ,
             * from there moves **UP** to line 3,
