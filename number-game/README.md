@@ -8,11 +8,11 @@
 ## code
 ```befunge
 v
-                                                         > "ENO si tuptuO" ,,,,,,,,,,,,,, !|
-                                         v  ,  <         ^                                .|
->    " :01 dna 0 neewteb rebmun a retnE" >  :  |         ^                                .|
-                                               > & 1 ` > |                                .|
-                                                         > "orez si tuptuO" ,,,,,,,,,,,,,, @
+                                                         > "ENO si tuptuO" ,,,,,,,,,,,,,, |
+                                         v  ,  <         ^                                |
+>    " :01 dna 0 neewteb rebmun a retnE" >  :  |         ^                                |
+                                               > & 1 ` > |                                |
+                                                         > "orez si tuptuO" ,,,,,,,,,,,,,,@
 
 ```
                                                          
@@ -39,8 +39,8 @@ v
             * from there moves **UP** to line 3,
             * moves **UP** to line 2,
             * moves **RIGHT** and prints `Output is ONE` [<sup>1</sup>](#superscript-1);
-            * (on line 2) the (non-zero) value is **negated** (ie. set to `0`) and popped off the stack by the `!` instruction - this sets the direction of the `|` instruction to **DOWN**,
-            * (on lines 3-5 left-to-right) the `.` instruction pops the top value from the stack, the direction of the `|` instruction is **DOWN**,
+            * the stack is now empty (ie. value is `0`) - this sets the direction of the `|` instruction to **DOWN**,
+            * (on lines 3-5 left-to-right) the direction of the `|` instruction is **DOWN** (since value is `0`),
             * (on line 6) the `@` instruction is reached and ends the program.
         *  if the popped value **IS** `0`:
             *  moves **DOWN** to line 6
